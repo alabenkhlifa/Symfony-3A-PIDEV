@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<head>
+    <!-- Basic need -->
+    <title>Karhabty - {% block title %}AutoEcole{% endblock title %}</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Kalai Rania">
+    <link rel="profile" href="#">
+    <!--Google Font-->
+    <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Oswald:700' />
+    <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,700' />
+    <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Open+Sans:800i' />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!-- Mobile specific meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="format-detection" content="telephone-no">
+    <!-- CSS files -->
+    <link rel="stylesheet" href="{{ asset('css/plugins.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+    {% block style %}{% endblock style %}
+</head>
+
+<body>
+
+<!-- BEGIN | Light Header -->
+<header class="ht-header" id="light-header">
+    <!-- BEGIN | Top Bar -->
+    <div class="light-topbar">
+        <div class="container">
+            <div class="topbar">
+                <div class="topbar-welcome">
+                    <p>Welcome {% block user %}{% if moniteur is not null %}{{ moniteur.nom }} {{ moniteur.prenom }}{% else %}to Karhabty! Place <a href="{{ path('auto_ecole_moniteur_login') }}" class="login">Login</a>{% endif %}{% endblock user %}</p>
+                </div>
+                <div class="topbar-contact">
+                    <p>Esprit Ghazela</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END | Top Bar -->
+</header>
+<!-- END | Header -->
+
+<main id="main" class="page-content">
+{% block body %}
+    <!-- START | Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <div class="flex-box">
+                <h4>List Entrainements</h4>
+                <ul class="list-inline">
+                    <li><a href="{{ path('auto_ecole_moniteur_dashboard') }}">Home</a></li>
+                    <li class="current-page">Entrainement</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Voiture</th>
+                        <th scope="col">Candidat</th>
+                        <th scope="col">date</th>
+                        <th scope="col"></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for entrainement in entrainements %}
+                        <tr {% if date(entrainement.dateentrainement) < date('now') %}class="bg-info"{% endif %}>
+                            <th>{{ entrainement.voiture.modele }} - {{ entrainement.voiture.marque }}</th>
+                            <td>{{ entrainement.candidat.nom }} {{ entrainement.candidat.prenom }}</td>
+                            <td>{{ entrainement.dateentrainement | date }}</td>
+                            <td>{% if entrainement.approuve %}
+                                    {% if entrainement.annulation is null %}
+                                            <a class="btn btn-warning btn-block btn-xs" href="{{ path('rania_entrainement_annuler', {'id': entrainement.id}) }}"><i class="fa fa-ban"> Annuler</i></a>
+                                    {% else %}
+                                        {% if entrainement.annulation.postedBy %}
+                                                <a class="btn btn-info btn-block btn-xs" href="#" disabled="true">Annulation En Cours</a>
+                                        {% else %}
+                                                <a class="btn btn-success btn-block btn-xs" href="{{ path('rania_annuler_approuver', {'id': entrainement.annulation.id}) }}">Approuver l'Annulation</a>
+                                        {% endif %}
+                                    {% endif %}
+                                {% else %}
+                                        <a class="btn btn-danger btn-block btn-xs" href="{{ path('rania_entrainement_supprimer', {'id': entrainement.id}) }}"><i class="fa fa-ban"> Supprimer</i></a>
+                                {% endif %}
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock body %}
+</main>
+
+<div class="topsearch-form ">
+    <form action="http://haintheme.com/demo/html/autos/topsearch.php">
+        <label><input type="text" placeholder="Search products&hellip;" id="top-search"></label>
+        <span id="search-close"><i class="icon ion-close"></i></span>
+    </form>
+</div>
+<footer class="ht-footer">
+    <div class="pre-footer">
+        <div class="container">
+            <div class="row">
+                <div class="intro col-md-3">
+                    <img src="images/uploads/header_logo-dark.png" alt="Logo">
+                    <p>At <a href="#">Autos</a>, we look forward to serving your Pre-Owned needs and we hope that we can help you with your next Pre-Owned purchase.</p>
+                    <h5>Find Us on:</h5>
+                    <div class="social">
+                        <a href="#"><i class="icon ion-social-facebook"></i></a>
+                        <a href="#"><i class="icon ion-social-twitter"></i></a>
+                        <a href="#"><i class="icon ion-social-googleplus"></i></a>
+                        <a href="#"><i class="icon ion-social-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="contact col-md-3">
+                    <h4>CONTACT INFO</h4>
+                    <ul>
+                        <li><i class="icon ion-ios-location"></i><span>3588 N  Stelling road, Brooklyn, NYC, United State.</span></li>
+                        <li><i class="icon ion-ios-telephone"></i><a href="tel:1900-167-168-99">1900-167-168-99 EXT: 001</a></li>
+                        <li><span class="glyphicon glyphicon-phone-alt"></span><a href="tel:841325643333">(84) 132-564-3333</a></li>
+                        <li><i class="icon ion-email-unread"></i><a href="mailto:Autos@support.com">Autos@support.com</a></li>
+                    </ul>
+                    <div class="come-with-us"><i class="icon ion-information-circled"></i> Come with us? <a href="#">View Direction</a></div>
+
+                </div>
+                <div class="working-hours col-md-3">
+                    <h4>WORKING HOURS</h4>
+                    <table class="table">
+                        <tbody>
+                        <tr>
+                            <td>Sat & Sunday:</td><td>Closed</td>
+                        </tr>
+                        <tr>
+                            <td>Tuesday:</td><td>8:00 AM - 6:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Wednesday:</td><td>8:00 AM - 6:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Thursday:</td><td>8:00 AM - 6:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Friday:</td><td>8:00 AM - 6:00 PM</td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+                <div class="subscribe col-md-3">
+                    <h4>SUBSCRIBE US</h4>
+                    <form>
+                        <div class="input-group">
+                            <input type="email" id="email-subscribe" name="email-subscribe" placeholder="Enter your email...">
+                            <button type="submit"><i class="icon ion-social-rss"></i></button>
+                        </div>
+                        <label> Get lastest updates and offers.</label>
+                    </form>
+                    <div class="gallery">
+                        <a href="#"><img src="images/uploads/footer-gallery-1.jpg" alt="gallery"></a>
+                        <a href="#"><img src="images/uploads/footer-gallery-2.jpg" alt="gallery"></a>
+                        <a href="#"><img src="images/uploads/footer-gallery-3.jpg" alt="gallery"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <div class="copy-right">
+                Copyright © 2017. Made with <i class="icon ion-ios-heart"></i> by <a href="#">FelixDG</a>.
+            </div>
+            <div class="site-link">
+                <a href="#">FAQS</a>
+                <a href="#">SITEMAP</a>
+                <a href="#">COMMUNITY</a>
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+<script src="{{ asset('js/jquery/1.9.1/jquery.min.js') }}"></script>
+<script src="{{ asset('js/jquery-1.12.4.js') }}"></script>
+<!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
+<script src="{{ asset('js/plugins.js') }}"></script>
+<script src="{{ asset('js/custom.js') }}"></script>
+</body>
+{% block script %}{% endblock script %}
+<!-- Mirrored from haintheme.com/demo/html/autos/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 24 May 2018 15:35:31 GMT -->
+</html>

@@ -2,11 +2,14 @@ auto_ecole_homepage:
     path:     /
     defaults: { _controller: AutoEcoleBundle:Default:index }
 auto_ecole_login:
-    path:     /login/{email}/{password}
+    path:     /login/{email}/{password}/{type}
     defaults: { _controller: AutoEcoleBundle:Default:login }
 auto_ecole_voiture_all:
     path:     /voiture/getall
     defaults: { _controller: AutoEcoleBundle:Default:getAllVoiture }
+auto_ecole_voiture:
+    path:     /voiture/{id}
+    defaults: { _controller: AutoEcoleBundle:Default:getVoiture }
 auto_ecole_candidat_all:
     path:     /candidat/getall
     defaults: { _controller: AutoEcoleBundle:Default:getAllCandidat }
@@ -16,6 +19,9 @@ auto_ecole_minitor_calendar:
 auto_ecole_minitor_getall:
     path:     /monitor/getall
     defaults: { _controller: AutoEcoleBundle:Default:getAllMonitor }
+auto_ecole_minitor:
+    path:     /monitor/{id}
+    defaults: { _controller: AutoEcoleBundle:Default:getMonitor }
 auto_ecole_entrainement_getall:
     path:     /entrainement
     defaults: { _controller: AutoEcoleBundle:Default:getAllEntrainement }

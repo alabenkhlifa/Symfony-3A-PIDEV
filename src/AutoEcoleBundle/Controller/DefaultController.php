@@ -17,20 +17,35 @@ class DefaultController extends Controller
         return $this->render('AutoEcoleBundle:Default:index.html.twig');
     }
 
-    public function loginAction($email,$password)
+    public function loginAction($email,$password,$type)
     {
         $em = $this->getDoctrine()->getManager();
-        $candidat = $em->getRepository('AutoEcoleBundle:Candidat')->findOneBy(
-            array('email' => $email,'motdepasse'=>$password));
-        if($candidat != null){
-            $myresponse = array(
-                'id' => $candidat->getId(),
-                'nom' => $candidat->getNom(),
-                'prenom' => $candidat->getPrenom(),
-                'cin' => $candidat->getCin()
-            );
+        if ($type==0){
+            $candidat = $em->getRepository('AutoEcoleBundle:Candidat')->findOneBy(
+                array('email' => $email,'motdepasse'=>$password));
+            if($candidat != null){
+                $myresponse = array(
+                    'id' => $candidat->getId(),
+                    'nom' => $candidat->getNom(),
+                    'prenom' => $candidat->getPrenom(),
+                    'cin' => $candidat->getCin()
+                );
 
-            return new JsonResponse($myresponse);
+                return new JsonResponse($myresponse);
+            }
+        }else{
+            $candidat = $em->getRepository('AutoEcoleBundle:Moniteur')->findOneBy(
+                array('email' => $email,'motdepasse'=>$password));
+            if($candidat != null){
+                $myresponse = array(
+                    'id' => $candidat->getId(),
+                    'nom' => $candidat->getNom(),
+                    'prenom' => $candidat->getPrenom(),
+                    'cin' => $candidat->getCin()
+                );
+
+                return new JsonResponse($myresponse);
+            }
         }
         throw new NotFoundHttpException();
     }
@@ -55,6 +70,25 @@ class DefaultController extends Controller
         return new JsonResponse($arrayCollection);
     }
 
+    public function getVoitureAction($id)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $voitures = $em->getRepository('AutoEcoleBundle:Voiture')->findOneById($id);
+
+
+        $arrayCollection[] = array(
+            'id' => $voitures->getId(),
+            'immatricule' => $voitures->getImmatricule(),
+            'marque' => $voitures->getMarque(),
+            'modele' => $voitures->getModele(),
+            'age' => $voitures->getAge(),
+            'couleur' => $voitures->getCouleur(),
+            'cout' => $voitures->getCout()
+        );
+
+
+        return new JsonResponse($arrayCollection);
+    }
     public function getAllCandidatAction()
     {
         $em = $this->getDoctrine()->getManager();
@@ -135,6 +169,20 @@ class DefaultController extends Controller
         return new JsonResponse($arrayCollection);
     }
 
+    public function getMonitorAction($id)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $monitors = $em->getRepository('AutoEcoleBundle:Moniteur')->findOneById($id);
+
+        $arrayCollection[] = array(
+            'id' => $monitors->getId(),
+            'nom' => $monitors->getNom(),
+            'prenom' => $monitors->getPrenom(),
+        );
+
+        return new JsonResponse($arrayCollection);
+    }
+
     public function getCalendarbyMonitorAction($id)
     {
         $em = $this->getDoctrine()->getManager();
@@ -171,6 +219,8 @@ class DefaultController extends Controller
         $entrainement->setCandidat($candidat);
         $entrainement->setMoniteur($monitor);
         $entrainement->setVoiture($voiture);
+        $entrainement->setApprouve(0);
+
         $datet = new \DateTime($date);
         $entrainement->setDateentrainement($datet);
         $em->persist($entrainement);

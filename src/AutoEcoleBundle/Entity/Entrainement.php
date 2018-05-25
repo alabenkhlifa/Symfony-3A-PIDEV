@@ -57,6 +57,7 @@ class Entrainement
 
     /**
      * @ORM\OneToOne(targetEntity="AutoEcoleBundle\Entity\Annulation")
+     * @ORM\JoinColumn(name="annulation_id", referencedColumnName="id", onDelete="CASCADE")
      */
     private $annulation;
 

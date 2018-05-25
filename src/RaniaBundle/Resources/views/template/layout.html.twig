@@ -1,0 +1,1760 @@
+<!DOCTYPE html>
+<head>
+    <!-- Basic need -->
+    <title>Karhabty - {% block title %}AutoEcole{% endblock title %}</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Kalai Rania">
+    <link rel="profile" href="#">
+    <!--Google Font-->
+    <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Oswald:700' />
+    <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,700' />
+    <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Open+Sans:800i' />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!-- Mobile specific meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="format-detection" content="telephone-no">
+    <!-- CSS files -->
+    <link rel="stylesheet" href="{{ asset('css/plugins.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+    {% block style %}{% endblock style %}
+</head>
+
+<body>
+
+<!-- BEGIN | Light Header -->
+<header class="ht-header" id="light-header">
+    <!-- BEGIN | Top Bar -->
+    <div class="light-topbar">
+        <div class="container">
+            <div class="topbar">
+                <div class="topbar-welcome">
+                    <p>Welcome {% block user %}{% if user is not null %}{{ user.nom }} {{ user.prenom }}{% else %}to Karhabty! Place <a href="{{ path('fos_user_security_login') }}" class="login">Login</a> or <a href="{{ path('fos_user_registration_register') }}" class="register">Register</a>{% endif %}{% endblock user %}</p>
+                </div>
+                <div class="topbar-contact">
+                    <p>Esprit Ghazela</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END | Top Bar -->
+
+    <!-- BEGIN | Menu -->
+    <nav class="navbar header-menu">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapseNav">
+                    <i class="fa fa-bars"></i>
+                </button>
+
+                <a href="{{ path('rania_homepage') }}"><img src="{{ asset('images/logo.png') }}" alt="logo" width="150px"></a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="collapseNav">
+                <div class="call navbar-right" id="call-for-action">
+                    <i class="fa fa-phone"></i>
+                    <div class="call-text">
+                        <span>ESPRIT TN</span>
+                        <span><a href="tel:763-478-8808">+216 70 685 685</a></span>
+                    </div>
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="{{ path('rania_homepage') }}">HOME</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Entrainement</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{{ path('rania_entrainement_reserver') }}">Reserver</a></li>
+                            <li><a href="{{ path('rania_entrainement_list') }}">Liste des entrainements</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Permis</a>
+                    </li>
+                    <li><a href="accessories.html">Code</a></li>
+                    <li><a href="{{ path('auto_ecole_moniteur_dashboard') }}">Admin Dashboard</a></li>
+                    <li id="search-open"><i class="fa fa-search"></i></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- END | Menu -->
+</header>
+<!-- END | Header -->
+
+<main id="main" class="page-content">
+{% block body %}
+
+    <div id="rev_slider_13_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-alias="home-01" data-source="gallery" style="margin:0px auto;background-color:transparent;padding:0px;margin-top:0px;margin-bottom:0px;">
+        <!-- START REVOLUTION SLIDER 5.3.1.5 fullwidth mode -->
+        <div id="rev_slider_13_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.3.1.5">
+            <ul>	<!-- SLIDE  -->
+                <li data-index="rs-49" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb="images/uploads/slider-01-100x50.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide 1" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                    <!-- MAIN IMAGE -->
+                    <img src="{{ asset('images/uploads/slider-01.jpg') }}"  alt="" title="slider-01"  width="1919" height="840" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+                    <!-- LAYERS -->
+                    <div id="rrzt_49" class="rev_row_zone rev_row_zone_top" style="z-index: 6;">
+
+                        <!-- LAYER NR. 1 -->
+                        <div class="tp-caption  "
+                             id="slide-49-layer-6"
+                             data-x="['left','left','left','left']" data-hoffset="['100','100','100','100']"
+                             data-y="['top','top','top','top']" data-voffset="['100','100','100','100']"
+                             data-width="none"
+                             data-height="none"
+                             data-whitespace="nowrap"
+
+                             data-type="row"
+                             data-columnbreak="3"
+                             data-responsive_offset="on"
+
+                             data-frames='[{"delay":10,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                             data-margintop="[0,0,0,0]"
+                             data-marginright="[0,0,0,0]"
+                             data-marginbottom="[0,0,0,0]"
+                             data-marginleft="[0,0,0,0]"
+                             data-textAlign="['inherit','inherit','inherit','inherit']"
+                             data-paddingtop="[0,0,0,0]"
+                             data-paddingright="[0,0,0,0]"
+                             data-paddingbottom="[0,0,0,0]"
+                             data-paddingleft="[0,0,0,0]"
+
+                             style="z-index: 6; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: rgba(255, 255, 255, 1.00);">
+                            <!-- LAYER NR. 2 -->
+                            <div class="tp-caption  "
+                                 id="slide-49-layer-7"
+                                 data-x="['left','left','left','left']" data-hoffset="['100','100','100','100']"
+                                 data-y="['top','top','top','top']" data-voffset="['100','100','100','100']"
+                                 data-width="none"
+                                 data-height="none"
+                                 data-whitespace="nowrap"
+
+                                 data-type="column"
+                                 data-responsive_offset="on"
+
+                                 data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                                 data-columnwidth="50%"
+                                 data-margintop="[0,0,0,0]"
+                                 data-marginright="[0,0,0,0]"
+                                 data-marginbottom="[0,0,0,0]"
+                                 data-marginleft="[0,0,0,0]"
+                                 data-textAlign="['inherit','inherit','inherit','inherit']"
+                                 data-paddingtop="[0,0,0,0]"
+                                 data-paddingright="[0,0,0,0]"
+                                 data-paddingbottom="[0,0,0,0]"
+                                 data-paddingleft="[0,0,0,0]"
+
+                                 style="z-index: 7; width: 100%;">				</div>
+
+                            <!-- LAYER NR. 3 -->
+                            <div class="tp-caption  "
+                                 id="slide-49-layer-8"
+                                 data-x="['left','left','left','left']" data-hoffset="['100','100','100','100']"
+                                 data-y="['top','top','top','top']" data-voffset="['100','100','100','100']"
+                                 data-width="none"
+                                 data-height="none"
+                                 data-whitespace="nowrap"
+
+                                 data-type="column"
+                                 data-responsive_offset="on"
+
+                                 data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                                 data-columnwidth="50%"
+                                 data-margintop="[0,0,0,0]"
+                                 data-marginright="[0,0,0,0]"
+                                 data-marginbottom="[0,0,0,0]"
+                                 data-marginleft="[0,0,0,0]"
+                                 data-textAlign="['inherit','inherit','inherit','inherit']"
+                                 data-paddingtop="[0,0,0,0]"
+                                 data-paddingright="[0,0,0,0]"
+                                 data-paddingbottom="[0,0,0,0]"
+                                 data-paddingleft="[0,0,0,0]"
+
+                                 style="z-index: 8; width: 100%;">				</div>
+                        </div>
+                    </div>
+
+                    <!-- LAYER NR. 4 -->
+                    <div class="tp-caption     rev_group"
+                         id="slide-49-layer-9"
+                         data-x="['right','right','center','center']" data-hoffset="['32','182','0','0']"
+                         data-y="['top','top','top','top']" data-voffset="['278','319','319','307']"
+                         data-width="['370','370','351','329']"
+                         data-height="['186','195','188','173']"
+                         data-whitespace="nowrap"
+
+                         data-type="group"
+                         data-responsive_offset="on"
+
+                         data-frames='[{"delay":10,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                         data-margintop="[0,0,0,0]"
+                         data-marginright="[0,0,0,0]"
+                         data-marginbottom="[0,0,0,0]"
+                         data-marginleft="[0,0,0,0]"
+                         data-textAlign="['inherit','inherit','inherit','inherit']"
+                         data-paddingtop="[0,0,0,0]"
+                         data-paddingright="[0,0,0,0]"
+                         data-paddingbottom="[0,0,0,0]"
+                         data-paddingleft="[0,0,0,0]"
+
+                         style="z-index: 9; min-width: 370px; max-width: 370px; max-width: 186px; max-width: 186px; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: rgba(255, 255, 255, 1.00);background-color:rgba(255, 255, 255, 1.00);">
+                        <!-- LAYER NR. 5 -->
+                        <div class="tp-caption   tp-resizeme"
+                             id="slide-49-layer-15"
+                             data-x="['left','left','left','left']" data-hoffset="['115','117','117','106']"
+                             data-y="['top','top','top','top']" data-voffset="['30','30','30','22']"
+                             data-fontsize="['18','18','18','14']"
+                             data-lineheight="['18','18','18','22']"
+                             data-width="none"
+                             data-height="none"
+                             data-whitespace="nowrap"
+
+                             data-type="text"
+                             data-responsive_offset="on"
+
+                             data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                             data-margintop="[0,0,0,0]"
+                             data-marginright="[0,0,0,0]"
+                             data-marginbottom="[0,0,0,0]"
+                             data-marginleft="[0,0,0,0]"
+                             data-textAlign="['inherit','inherit','inherit','inherit']"
+                             data-paddingtop="[0,0,0,0]"
+                             data-paddingright="[0,0,0,0]"
+                             data-paddingbottom="[0,0,0,0]"
+                             data-paddingleft="[0,0,0,0]"
+
+                             style="z-index: 10; white-space: nowrap; font-size: 18px; line-height: 18px; font-weight: 700; color: rgba(136, 136, 136, 1.00);font-family:Roboto;background-color:rgba(255, 255, 255, 1.00);">24 months
+                        </div>
+
+                        <!-- LAYER NR. 6 -->
+                        <div class="tp-caption   tp-resizeme"
+                             id="slide-49-layer-17"
+                             data-x="['left','left','left','left']" data-hoffset="['30','30','30','35']"
+                             data-y="['top','top','top','top']" data-voffset="['70','60','68','59']"
+                             data-fontsize="['30','30','24','24']"
+                             data-lineheight="['22','30','24','22']"
+                             data-width="['none','none','none','100']"
+                             data-height="['none','none','none','30']"
+                             data-whitespace="nowrap"
+
+                             data-type="text"
+                             data-responsive_offset="on"
+
+                             data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                             data-margintop="[0,0,0,0]"
+                             data-marginright="[0,0,0,0]"
+                             data-marginbottom="[0,0,0,0]"
+                             data-marginleft="[0,0,0,0]"
+                             data-textAlign="['inherit','inherit','inherit','inherit']"
+                             data-paddingtop="[0,0,0,0]"
+                             data-paddingright="[0,0,0,0]"
+                             data-paddingbottom="[0,0,0,0]"
+                             data-paddingleft="[0,0,0,0]"
+
+                             style="z-index: 11; white-space: nowrap; font-size: 30px; line-height: 22px; font-weight: 700; color: rgba(242, 101, 34, 1.00);font-family:Roboto;">$685 </div>
+
+                        <!-- LAYER NR. 7 -->
+                        <div class="tp-caption   tp-resizeme"
+                             id="slide-49-layer-18"
+                             data-x="['left','left','left','left']" data-hoffset="['112','112','97','104']"
+                             data-y="['top','top','top','top']" data-voffset="['70','60','68','59']"
+                             data-fontsize="['30','30','24','24']"
+                             data-lineheight="['22','27','24','22']"
+                             data-width="none"
+                             data-height="none"
+                             data-whitespace="nowrap"
+
+                             data-type="text"
+                             data-responsive_offset="on"
+
+                             data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                             data-margintop="[0,0,0,0]"
+                             data-marginright="[0,0,0,0]"
+                             data-marginbottom="[0,0,0,0]"
+                             data-marginleft="[0,0,0,0]"
+                             data-textAlign="['inherit','inherit','inherit','inherit']"
+                             data-paddingtop="[0,0,0,0]"
+                             data-paddingright="[0,0,0,0]"
+                             data-paddingbottom="[0,0,0,0]"
+                             data-paddingleft="[0,0,0,0]"
+
+                             style="z-index: 12; white-space: nowrap; font-size: 30px; line-height: 22px; font-weight: 700; color: rgba(118, 118, 118, 1.00);font-family:Roboto;">PER MONTH * </div>
+
+                        <!-- LAYER NR. 8 -->
+                        <div class="tp-caption   tp-resizeme"
+                             id="slide-49-layer-19"
+                             data-x="['left','left','left','left']" data-hoffset="['30','30','30','35']"
+                             data-y="['top','top','top','top']" data-voffset="['30','30','30','22']"
+                             data-fontsize="['18','18','18','14']"
+                             data-lineheight="['18','18','18','22']"
+                             data-width="none"
+                             data-height="none"
+                             data-whitespace="nowrap"
+
+                             data-type="text"
+                             data-responsive_offset="on"
+
+                             data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                             data-margintop="[0,0,0,0]"
+                             data-marginright="[0,0,0,0]"
+                             data-marginbottom="[0,0,0,0]"
+                             data-marginleft="[0,0,0,0]"
+                             data-textAlign="['inherit','inherit','inherit','inherit']"
+                             data-paddingtop="[0,0,0,0]"
+                             data-paddingright="[0,0,0,0]"
+                             data-paddingbottom="[0,0,0,0]"
+                             data-paddingleft="[0,0,0,0]"
+
+                             style="z-index: 13; white-space: nowrap; font-size: 18px; line-height: 18px; font-weight: 300; color: rgba(136, 136, 136, 1.00);font-family:Roboto;background-color:rgba(255, 255, 255, 1.00);">Maximum </div>
+
+                        <!-- LAYER NR. 9 -->
+                        <div class="tp-caption   tp-resizeme"
+                             id="slide-49-layer-20"
+                             data-x="['left','left','left','left']" data-hoffset="['30','30','30','35']"
+                             data-y="['top','top','top','top']" data-voffset="['104','95','98','88']"
+                             data-fontsize="['30','30','24','24']"
+                             data-lineheight="['22','30','24','22']"
+                             data-width="['none','none','none','100']"
+                             data-height="['none','none','none','30']"
+                             data-whitespace="nowrap"
+
+                             data-type="text"
+                             data-responsive_offset="on"
+
+                             data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                             data-margintop="[0,0,0,0]"
+                             data-marginright="[0,0,0,0]"
+                             data-marginbottom="[0,0,0,0]"
+                             data-marginleft="[0,0,0,0]"
+                             data-textAlign="['inherit','inherit','inherit','inherit']"
+                             data-paddingtop="[0,0,0,0]"
+                             data-paddingright="[0,0,0,0]"
+                             data-paddingbottom="[0,0,0,0]"
+                             data-paddingleft="[0,0,0,0]"
+
+                             style="z-index: 14; white-space: nowrap; font-size: 30px; line-height: 22px; font-weight: 700; color: rgba(242, 101, 34, 1.00);font-family:Roboto;">0% </div>
+
+                        <!-- LAYER NR. 10 -->
+                        <div class="tp-caption   tp-resizeme"
+                             id="slide-49-layer-21"
+                             data-x="['left','left','left','left']" data-hoffset="['84','84','74','78']"
+                             data-y="['top','top','top','top']" data-voffset="['104','95','98','88']"
+                             data-fontsize="['30','30','24','24']"
+                             data-lineheight="['22','30','24','22']"
+                             data-width="none"
+                             data-height="none"
+                             data-whitespace="nowrap"
+
+                             data-type="text"
+                             data-responsive_offset="on"
+
+                             data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                             data-margintop="[0,0,0,0]"
+                             data-marginright="[0,0,0,0]"
+                             data-marginbottom="[0,0,0,0]"
+                             data-marginleft="[0,0,0,0]"
+                             data-textAlign="['inherit','inherit','inherit','inherit']"
+                             data-paddingtop="[0,0,0,0]"
+                             data-paddingright="[0,0,0,0]"
+                             data-paddingbottom="[0,0,0,0]"
+                             data-paddingleft="[0,0,0,0]"
+
+                             style="z-index: 15; white-space: nowrap; font-size: 30px; line-height: 22px; font-weight: 700; color: rgba(118, 118, 118, 1.00);font-family:Roboto;">APR FINANCE </div>
+
+                        <!-- LAYER NR. 11 -->
+                        <div class="tp-caption   tp-resizeme"
+                             id="slide-49-layer-22"
+                             data-x="['left','left','left','left']" data-hoffset="['30','31','30','35']"
+                             data-y="['top','top','top','top']" data-voffset="['135','130','130','120']"
+                             data-fontsize="['30','30','24','24']"
+                             data-lineheight="['22','30','24','22']"
+                             data-width="['none','none','none','100']"
+                             data-height="['none','none','none','30']"
+                             data-whitespace="nowrap"
+
+                             data-type="text"
+                             data-responsive_offset="on"
+
+                             data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                             data-margintop="[0,0,0,0]"
+                             data-marginright="[0,0,0,0]"
+                             data-marginbottom="[0,0,0,0]"
+                             data-marginleft="[0,0,0,0]"
+                             data-textAlign="['inherit','inherit','inherit','inherit']"
+                             data-paddingtop="[0,0,0,0]"
+                             data-paddingright="[0,0,0,0]"
+                             data-paddingbottom="[0,0,0,0]"
+                             data-paddingleft="[0,0,0,0]"
+
+                             style="z-index: 16; white-space: nowrap; font-size: 30px; line-height: 22px; font-weight: 700; color: rgba(242, 101, 34, 1.00);font-family:Roboto;">NO </div>
+
+                        <!-- LAYER NR. 12 -->
+                        <div class="tp-caption   tp-resizeme"
+                             id="slide-49-layer-23"
+                             data-x="['left','left','left','left']" data-hoffset="['84','84','74','78']"
+                             data-y="['top','top','top','top']" data-voffset="['135','130','130','120']"
+                             data-fontsize="['30','30','24','24']"
+                             data-lineheight="['22','29','24','22']"
+                             data-width="none"
+                             data-height="none"
+                             data-whitespace="nowrap"
+
+                             data-type="text"
+                             data-responsive_offset="on"
+
+                             data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                             data-margintop="[0,0,0,0]"
+                             data-marginright="[0,0,0,0]"
+                             data-marginbottom="[0,0,0,0]"
+                             data-marginleft="[0,0,0,0]"
+                             data-textAlign="['inherit','inherit','inherit','inherit']"
+                             data-paddingtop="[0,0,0,0]"
+                             data-paddingright="[0,0,0,0]"
+                             data-paddingbottom="[0,0,0,0]"
+                             data-paddingleft="[0,0,0,0]"
+
+                             style="z-index: 17; white-space: nowrap; font-size: 30px; line-height: 22px; font-weight: 700; color: rgba(118, 118, 118, 1.00);font-family:Roboto;">DEPOSIT </div>
+                    </div>
+
+                    <!-- LAYER NR. 13 -->
+                    <div class="tp-caption     rev_group"
+                         id="slide-49-layer-28"
+                         data-x="['right','right','center','center']" data-hoffset="['0','150','0','0']"
+                         data-y="['middle','top','top','top']" data-voffset="['-120','179','179','164']"
+                         data-width="['430','430','430','355']"
+                         data-height="['119','119','119','116']"
+                         data-whitespace="nowrap"
+
+                         data-type="group"
+                         data-responsive_offset="on"
+
+                         data-frames='[{"delay":10,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                         data-margintop="[0,0,0,0]"
+                         data-marginright="[0,0,0,0]"
+                         data-marginbottom="[0,0,0,0]"
+                         data-marginleft="[0,0,0,0]"
+                         data-textAlign="['inherit','inherit','inherit','inherit']"
+                         data-paddingtop="[0,0,0,0]"
+                         data-paddingright="[0,0,0,0]"
+                         data-paddingbottom="[0,0,0,0]"
+                         data-paddingleft="[0,0,0,0]"
+
+                         style="z-index: 18; min-width: 430px; max-width: 430px; max-width: 119px; max-width: 119px; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: rgba(255, 255, 255, 1.00);">
+                        <!-- LAYER NR. 14 -->
+                        <div class="tp-caption   tp-resizeme"
+                             id="slide-49-layer-24"
+                             data-x="['left','left','left','left']" data-hoffset="['65','65','65','65']"
+                             data-y="['top','top','top','top']" data-voffset="['0','0','0','0']"
+                             data-width="none"
+                             data-height="none"
+                             data-whitespace="nowrap"
+
+                             data-type="text"
+                             data-responsive_offset="on"
+
+                             data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                             data-margintop="[0,0,0,0]"
+                             data-marginright="[0,0,0,0]"
+                             data-marginbottom="[0,0,0,0]"
+                             data-marginleft="[0,0,0,0]"
+                             data-textAlign="['inherit','inherit','inherit','inherit']"
+                             data-paddingtop="[0,0,0,0]"
+                             data-paddingright="[0,0,0,0]"
+                             data-paddingbottom="[0,0,0,0]"
+                             data-paddingleft="[0,0,0,0]"
+
+                             style="z-index: 19; white-space: nowrap; font-size: 24px; line-height: 24px; font-weight: 300; color: rgba(255, 255, 255, 1.00);font-family:Open Sans;">HONDA CIVIC </div>
+
+                        <!-- LAYER NR. 15 -->
+                        <div class="tp-caption   tp-resizeme"
+                             id="slide-49-layer-25"
+                             data-x="['left','left','left','left']" data-hoffset="['0','0','0','0']"
+                             data-y="['top','top','top','top']" data-voffset="['0','0','0','0']"
+                             data-width="none"
+                             data-height="none"
+                             data-whitespace="nowrap"
+
+                             data-type="text"
+                             data-responsive_offset="on"
+
+                             data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                             data-margintop="[0,0,0,0]"
+                             data-marginright="[0,0,0,0]"
+                             data-marginbottom="[0,0,0,0]"
+                             data-marginleft="[0,0,0,0]"
+                             data-textAlign="['inherit','inherit','inherit','inherit']"
+                             data-paddingtop="[0,0,0,0]"
+                             data-paddingright="[0,0,0,0]"
+                             data-paddingbottom="[0,0,0,0]"
+                             data-paddingleft="[0,0,0,0]"
+
+                             style="z-index: 20; white-space: nowrap; font-size: 24px; line-height: 24px; font-weight: 700; color: rgba(255, 255, 255, 1.00);font-family:Roboto;">2017 </div>
+
+                        <!-- LAYER NR. 16 -->
+                        <div class="tp-caption   tp-resizeme"
+                             id="slide-49-layer-26"
+                             data-x="['left','left','left','center']" data-hoffset="['0','0','0','0']"
+                             data-y="['top','top','top','top']" data-voffset="['40','40','40','40']"
+                             data-fontsize="['72','72','72','60']"
+                             data-lineheight="['72','72','72','60']"
+                             data-width="none"
+                             data-height="none"
+                             data-whitespace="nowrap"
+
+                             data-type="text"
+                             data-responsive_offset="on"
+
+                             data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                             data-margintop="[0,0,0,0]"
+                             data-marginright="[0,0,0,0]"
+                             data-marginbottom="[0,0,0,0]"
+                             data-marginleft="[0,0,0,0]"
+                             data-textAlign="['inherit','inherit','inherit','inherit']"
+                             data-paddingtop="[0,0,0,0]"
+                             data-paddingright="[0,0,0,0]"
+                             data-paddingbottom="[0,0,0,0]"
+                             data-paddingleft="[0,0,0,0]"
+
+                             style="z-index: 21; white-space: nowrap; font-size: 72px; line-height: 72px; font-weight: 700; color: rgba(255, 255, 255, 1.00);font-family:Oswald;">MONTHLY SALE </div>
+                    </div>
+
+                    <!-- LAYER NR. 17 -->
+                    <div class="tp-caption   tp-resizeme"
+                         id="slide-49-layer-5"
+                         data-x="['left','left','left','left']" data-hoffset="['100','100','100','100']"
+                         data-y="['top','top','top','top']" data-voffset="['100','100','100','100']"
+                         data-width="none"
+                         data-height="none"
+                         data-whitespace="nowrap"
+
+                         data-type="text"
+                         data-responsive_offset="on"
+
+                         data-frames='[{"delay":10,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                         data-textAlign="['inherit','inherit','inherit','inherit']"
+                         data-paddingtop="[0,0,0,0]"
+                         data-paddingright="[0,0,0,0]"
+                         data-paddingbottom="[0,0,0,0]"
+                         data-paddingleft="[0,0,0,0]"
+
+                         style="z-index: 5; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: rgba(255, 255, 255, 1.00);font-family:Open Sans;"> </div>
+
+                    <!-- LAYER NR. 18 -->
+                    <div class="tp-caption   tp-resizeme"
+                         id="slide-49-layer-31"
+                         data-x="['left','left','center','left']" data-hoffset="['827','462','0','67']"
+                         data-y="['top','top','top','top']" data-voffset="['493','557','539','514']"
+                         data-width="none"
+                         data-height="none"
+                         data-whitespace="nowrap"
+
+                         data-type="text"
+                         data-responsive_offset="on"
+
+                         data-frames='[{"delay":10,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                         data-textAlign="['inherit','inherit','inherit','inherit']"
+                         data-paddingtop="[0,0,0,0]"
+                         data-paddingright="[0,0,0,0]"
+                         data-paddingbottom="[0,0,0,0]"
+                         data-paddingleft="[0,0,0,0]"
+
+                         style="z-index: 22; white-space: nowrap; font-size: 16px; line-height: 16px; font-weight: 400; color: rgba(255, 255, 255, 1.00);font-family:Roboto;">* Included Tax and Check Up Fee </div>
+
+                    <!-- LAYER NR. 19 -->
+                    <div class="tp-caption   tp-resizeme"
+                         id="slide-49-layer-30"
+                         data-x="['right','left','center','center']" data-hoffset="['18','458','0','0']"
+                         data-y="['top','top','top','top']" data-voffset="['298','348','350','331']"
+                         data-width="none"
+                         data-height="none"
+                         data-whitespace="nowrap"
+
+                         data-type="image"
+                         data-responsive_offset="on"
+
+                         data-frames='[{"delay":10,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                         data-textAlign="['inherit','inherit','inherit','inherit']"
+                         data-paddingtop="[0,0,0,0]"
+                         data-paddingright="[0,0,0,0]"
+                         data-paddingbottom="[0,0,0,0]"
+                         data-paddingleft="[0,0,0,0]"
+
+                         style="z-index: 23;"><img src="{{ asset('images/uploads/Untitled-1.png') }}" alt="" data-ww="['398px','398px','380px','359px']" data-hh="['179px','179px','171px','162px']" width="398" height="179" data-no-retina> </div>
+                </li>
+                <!-- SLIDE  -->
+                <li data-index="rs-64" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb="images/uploads/slider-01-2-100x50.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide 1" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                    <!-- MAIN IMAGE -->
+                    <img src="{{ asset('images/uploads/slider-01-2.jpg') }}"  alt="" title="slider-01-2"  width="1919" height="840" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+                    <!-- LAYERS -->
+                    <div id="rrzt_64" class="rev_row_zone rev_row_zone_top" style="z-index: 6;">
+
+                        <!-- LAYER NR. 20 -->
+                        <div class="tp-caption  "
+                             id="slide-64-layer-6"
+                             data-x="['left','left','left','left']" data-hoffset="['100','100','100','100']"
+                             data-y="['top','top','top','top']" data-voffset="['100','100','100','100']"
+                             data-width="none"
+                             data-height="none"
+                             data-whitespace="nowrap"
+
+                             data-type="row"
+                             data-columnbreak="3"
+                             data-responsive_offset="on"
+
+                             data-frames='[{"delay":10,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                             data-margintop="[0,0,0,0]"
+                             data-marginright="[0,0,0,0]"
+                             data-marginbottom="[0,0,0,0]"
+                             data-marginleft="[0,0,0,0]"
+                             data-textAlign="['inherit','inherit','inherit','inherit']"
+                             data-paddingtop="[0,0,0,0]"
+                             data-paddingright="[0,0,0,0]"
+                             data-paddingbottom="[0,0,0,0]"
+                             data-paddingleft="[0,0,0,0]"
+
+                             style="z-index: 6; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: rgba(255, 255, 255, 1.00);">
+                            <!-- LAYER NR. 21 -->
+                            <div class="tp-caption  "
+                                 id="slide-64-layer-7"
+                                 data-x="['left','left','left','left']" data-hoffset="['100','100','100','100']"
+                                 data-y="['top','top','top','top']" data-voffset="['100','100','100','100']"
+                                 data-width="none"
+                                 data-height="none"
+                                 data-whitespace="nowrap"
+
+                                 data-type="column"
+                                 data-responsive_offset="on"
+
+                                 data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                                 data-columnwidth="50%"
+                                 data-margintop="[0,0,0,0]"
+                                 data-marginright="[0,0,0,0]"
+                                 data-marginbottom="[0,0,0,0]"
+                                 data-marginleft="[0,0,0,0]"
+                                 data-textAlign="['inherit','inherit','inherit','inherit']"
+                                 data-paddingtop="[0,0,0,0]"
+                                 data-paddingright="[0,0,0,0]"
+                                 data-paddingbottom="[0,0,0,0]"
+                                 data-paddingleft="[0,0,0,0]"
+
+                                 style="z-index: 7; width: 100%;">				</div>
+
+                            <!-- LAYER NR. 22 -->
+                            <div class="tp-caption  "
+                                 id="slide-64-layer-8"
+                                 data-x="['left','left','left','left']" data-hoffset="['100','100','100','100']"
+                                 data-y="['top','top','top','top']" data-voffset="['100','100','100','100']"
+                                 data-width="none"
+                                 data-height="none"
+                                 data-whitespace="nowrap"
+
+                                 data-type="column"
+                                 data-responsive_offset="on"
+
+                                 data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                                 data-columnwidth="50%"
+                                 data-margintop="[0,0,0,0]"
+                                 data-marginright="[0,0,0,0]"
+                                 data-marginbottom="[0,0,0,0]"
+                                 data-marginleft="[0,0,0,0]"
+                                 data-textAlign="['inherit','inherit','inherit','inherit']"
+                                 data-paddingtop="[0,0,0,0]"
+                                 data-paddingright="[0,0,0,0]"
+                                 data-paddingbottom="[0,0,0,0]"
+                                 data-paddingleft="[0,0,0,0]"
+
+                                 style="z-index: 8; width: 100%;">				</div>
+                        </div>
+                    </div>
+
+                    <!-- LAYER NR. 23 -->
+                    <div class="tp-caption     rev_group"
+                         id="slide-64-layer-33"
+                         data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                         data-y="['bottom','bottom','bottom','bottom']" data-voffset="['120','120','140','120']"
+                         data-width="['1370','902','793','299']"
+                         data-height="['180','179','173','148']"
+                         data-whitespace="nowrap"
+
+                         data-type="group"
+                         data-responsive_offset="on"
+
+                         data-frames='[{"delay":10,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                         data-margintop="[0,0,0,0]"
+                         data-marginright="[0,0,0,0]"
+                         data-marginbottom="[0,0,0,0]"
+                         data-marginleft="[0,0,0,0]"
+                         data-textAlign="['inherit','inherit','inherit','inherit']"
+                         data-paddingtop="[0,0,0,0]"
+                         data-paddingright="[0,0,0,0]"
+                         data-paddingbottom="[0,0,0,0]"
+                         data-paddingleft="[0,0,0,0]"
+
+                         style="z-index: 9; min-width: 1370px; max-width: 1370px; max-width: 180px; max-width: 180px; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: rgba(255, 255, 255, 1.00);">
+                        <div class="tp-element-background" style=" background: url('images/uploads/slider-01-2-bg.png') repeat-y center center; background-size: contain; opacity: 1;"></div>
+                        <!-- LAYER NR. 24 -->
+                        <h2 class="tp-caption   tp-resizeme"
+                            id="slide-64-layer-34"
+                            data-x="['left','left','left','left']" data-hoffset="['100','100','60','0']"
+                            data-y="['top','top','top','top']" data-voffset="['45','42','47','24']"
+                            data-fontsize="['64','60','50','30']"
+                            data-lineheight="['64','60','50','30']"
+                            data-width="none"
+                            data-height="none"
+                            data-whitespace="nowrap"
+
+                            data-type="text"
+                            data-responsive_offset="on"
+
+                            data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                            data-margintop="[0,0,0,0]"
+                            data-marginright="[0,0,0,0]"
+                            data-marginbottom="[0,0,0,0]"
+                            data-marginleft="[0,0,0,0]"
+                            data-textAlign="['inherit','inherit','inherit','inherit']"
+                            data-paddingtop="[0,0,0,0]"
+                            data-paddingright="[0,0,0,0]"
+                            data-paddingbottom="[0,0,0,0]"
+                            data-paddingleft="[0,0,0,0]"
+
+                            style="z-index: 10; white-space: nowrap; font-size: 64px; line-height: 64px; font-weight: 700; color: rgba(255, 255, 255, 1.00);font-family:Oswald;text-transform:uppercase;">2017 Ford F-150 Raptor </h2>
+
+                        <!-- LAYER NR. 25 -->
+                        <div class="tp-caption   tp-resizeme"
+                             id="slide-64-layer-35"
+                             data-x="['left','left','left','left']" data-hoffset="['100','100','60','0']"
+                             data-y="['top','top','top','top']" data-voffset="['120','111','106','63']"
+                             data-fontsize="['30','28','20','18']"
+                             data-lineheight="['30','28','20','18']"
+                             data-width="none"
+                             data-height="none"
+                             data-whitespace="nowrap"
+
+                             data-type="text"
+                             data-responsive_offset="on"
+
+                             data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                             data-margintop="[0,0,0,0]"
+                             data-marginright="[0,0,0,0]"
+                             data-marginbottom="[0,0,0,0]"
+                             data-marginleft="[0,0,0,0]"
+                             data-textAlign="['inherit','inherit','inherit','inherit']"
+                             data-paddingtop="[0,0,0,0]"
+                             data-paddingright="[0,0,0,0]"
+                             data-paddingbottom="[0,0,0,0]"
+                             data-paddingleft="[0,0,0,0]"
+
+                             style="z-index: 11; white-space: nowrap; font-size: 30px; line-height: 30px; font-weight: 300; color: rgba(255, 255, 255, 1.00);font-family:Roboto Condensed;">Not Just Leaner. Meaner. </div>
+                    </div>
+
+                    <!-- LAYER NR. 26 -->
+                    <div class="tp-caption     rev_group"
+                         id="slide-64-layer-38"
+                         data-x="['right','right','right','left']" data-hoffset="['120','98','47','90']"
+                         data-y="['bottom','bottom','bottom','bottom']" data-voffset="['162','173','193','148']"
+                         data-width="['190','170','130','170']"
+                         data-height="['100','80','70','30']"
+                         data-whitespace="nowrap"
+
+                         data-type="group"
+                         data-responsive_offset="on"
+
+                         data-frames='[{"delay":10,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                         data-margintop="[0,0,0,0]"
+                         data-marginright="[0,0,0,0]"
+                         data-marginbottom="[0,0,0,0]"
+                         data-marginleft="[0,0,0,0]"
+                         data-textAlign="['inherit','inherit','inherit','inherit']"
+                         data-paddingtop="[0,0,0,0]"
+                         data-paddingright="[0,0,0,0]"
+                         data-paddingbottom="[0,0,0,0]"
+                         data-paddingleft="[0,0,0,0]"
+
+                         style="z-index: 12; min-width: 190px; max-width: 190px; max-width: 100px; max-width: 100px; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: rgba(255, 255, 255, 1.00);border-color:rgba(36, 38, 39, 1.00);border-style:solid;border-width:0px 0px 0px 1px;">
+                        <!-- LAYER NR. 27 -->
+                        <div class="tp-caption   tp-resizeme"
+                             id="slide-64-layer-37"
+                             data-x="['right','right','right','right']" data-hoffset="['0','0','0','0']"
+                             data-y="['top','top','top','middle']" data-voffset="['45','30','31','0']"
+                             data-fontsize="['36','36','26','20']"
+                             data-lineheight="['36','36','26','20']"
+                             data-width="none"
+                             data-height="none"
+                             data-whitespace="nowrap"
+
+                             data-type="text"
+                             data-responsive_offset="on"
+
+                             data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                             data-margintop="[0,0,0,0]"
+                             data-marginright="[0,0,0,0]"
+                             data-marginbottom="[0,0,0,0]"
+                             data-marginleft="[0,0,0,0]"
+                             data-textAlign="['inherit','inherit','inherit','inherit']"
+                             data-paddingtop="[0,0,0,0]"
+                             data-paddingright="[0,0,0,0]"
+                             data-paddingbottom="[0,0,0,0]"
+                             data-paddingleft="[0,0,0,0]"
+
+                             style="z-index: 13; white-space: nowrap; font-size: 36px; line-height: 36px; font-weight: 700; color: rgba(35, 170, 255, 1.00);font-family:Oswald;">$127,889 </div>
+
+                        <!-- LAYER NR. 28 -->
+                        <div class="tp-caption   tp-resizeme"
+                             id="slide-64-layer-36"
+                             data-x="['right','right','right','left']" data-hoffset="['0','0','0','0']"
+                             data-y="['top','top','top','middle']" data-voffset="['20','8','10','0']"
+                             data-fontsize="['18','18','16','16']"
+                             data-lineheight="['18','18','16','20']"
+                             data-width="['130','130','95','73']"
+                             data-height="['21','21','22','23']"
+                             data-whitespace="nowrap"
+
+                             data-type="text"
+                             data-responsive_offset="on"
+
+                             data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                             data-margintop="[0,0,0,0]"
+                             data-marginright="[0,0,0,0]"
+                             data-marginbottom="[0,0,0,0]"
+                             data-marginleft="[0,0,0,0]"
+                             data-textAlign="['inherit','inherit','inherit','inherit']"
+                             data-paddingtop="[0,0,0,0]"
+                             data-paddingright="[0,0,0,0]"
+                             data-paddingbottom="[0,0,0,0]"
+                             data-paddingleft="[0,0,0,0]"
+
+                             style="z-index: 14; min-width: 130px; max-width: 130px; max-width: 21px; max-width: 21px; white-space: nowrap; font-size: 18px; line-height: 18px; font-weight: 400; color: rgba(255, 255, 255, 1.00);font-family:Roboto Condensed;">Starting at: </div>
+                    </div>
+
+                    <!-- LAYER NR. 29 -->
+                    <div class="tp-caption   tp-resizeme"
+                         id="slide-64-layer-5"
+                         data-x="['left','left','left','left']" data-hoffset="['100','100','100','100']"
+                         data-y="['top','top','top','top']" data-voffset="['100','100','100','100']"
+                         data-width="none"
+                         data-height="none"
+                         data-whitespace="nowrap"
+
+                         data-type="text"
+                         data-responsive_offset="on"
+
+                         data-frames='[{"delay":10,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                         data-textAlign="['inherit','inherit','inherit','inherit']"
+                         data-paddingtop="[0,0,0,0]"
+                         data-paddingright="[0,0,0,0]"
+                         data-paddingbottom="[0,0,0,0]"
+                         data-paddingleft="[0,0,0,0]"
+
+                         style="z-index: 5; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: rgba(255, 255, 255, 1.00);font-family:Open Sans;"> </div>
+                </li>
+                <!-- SLIDE  -->
+                <li data-index="rs-65" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb="images/uploads/slider-01_03-100x50.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide 1" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                    <!-- MAIN IMAGE -->
+                    <img src="{{ asset('images/uploads/slider-01_03.jpg') }}"  alt="" title="slider-01_03"  width="1919" height="832" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+                    <!-- LAYERS -->
+                    <div id="rrzt_65" class="rev_row_zone rev_row_zone_top" style="z-index: 6;">
+
+                        <!-- LAYER NR. 30 -->
+                        <div class="tp-caption  "
+                             id="slide-65-layer-6"
+                             data-x="['left','left','left','left']" data-hoffset="['100','100','100','100']"
+                             data-y="['top','top','top','top']" data-voffset="['100','100','100','100']"
+                             data-width="none"
+                             data-height="none"
+                             data-whitespace="nowrap"
+
+                             data-type="row"
+                             data-columnbreak="3"
+                             data-responsive_offset="on"
+
+                             data-frames='[{"delay":10,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                             data-margintop="[0,0,0,0]"
+                             data-marginright="[0,0,0,0]"
+                             data-marginbottom="[0,0,0,0]"
+                             data-marginleft="[0,0,0,0]"
+                             data-textAlign="['inherit','inherit','inherit','inherit']"
+                             data-paddingtop="[0,0,0,0]"
+                             data-paddingright="[0,0,0,0]"
+                             data-paddingbottom="[0,0,0,0]"
+                             data-paddingleft="[0,0,0,0]"
+
+                             style="z-index: 6; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: rgba(255, 255, 255, 1.00);">
+                            <!-- LAYER NR. 31 -->
+                            <div class="tp-caption  "
+                                 id="slide-65-layer-7"
+                                 data-x="['left','left','left','left']" data-hoffset="['100','100','100','100']"
+                                 data-y="['top','top','top','top']" data-voffset="['100','100','100','100']"
+                                 data-width="none"
+                                 data-height="none"
+                                 data-whitespace="nowrap"
+
+                                 data-type="column"
+                                 data-responsive_offset="on"
+
+                                 data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                                 data-columnwidth="50%"
+                                 data-margintop="[0,0,0,0]"
+                                 data-marginright="[0,0,0,0]"
+                                 data-marginbottom="[0,0,0,0]"
+                                 data-marginleft="[0,0,0,0]"
+                                 data-textAlign="['inherit','inherit','inherit','inherit']"
+                                 data-paddingtop="[0,0,0,0]"
+                                 data-paddingright="[0,0,0,0]"
+                                 data-paddingbottom="[0,0,0,0]"
+                                 data-paddingleft="[0,0,0,0]"
+
+                                 style="z-index: 7; width: 100%;">				</div>
+
+                            <!-- LAYER NR. 32 -->
+                            <div class="tp-caption  "
+                                 id="slide-65-layer-8"
+                                 data-x="['left','left','left','left']" data-hoffset="['100','100','100','100']"
+                                 data-y="['top','top','top','top']" data-voffset="['100','100','100','100']"
+                                 data-width="none"
+                                 data-height="none"
+                                 data-whitespace="nowrap"
+
+                                 data-type="column"
+                                 data-responsive_offset="on"
+
+                                 data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                                 data-columnwidth="50%"
+                                 data-margintop="[0,0,0,0]"
+                                 data-marginright="[0,0,0,0]"
+                                 data-marginbottom="[0,0,0,0]"
+                                 data-marginleft="[0,0,0,0]"
+                                 data-textAlign="['inherit','inherit','inherit','inherit']"
+                                 data-paddingtop="[0,0,0,0]"
+                                 data-paddingright="[0,0,0,0]"
+                                 data-paddingbottom="[0,0,0,0]"
+                                 data-paddingleft="[0,0,0,0]"
+
+                                 style="z-index: 8; width: 100%;">				</div>
+                        </div>
+                    </div>
+
+                    <!-- LAYER NR. 33 -->
+                    <div class="tp-caption     rev_group"
+                         id="slide-65-layer-9"
+                         data-x="['left','left','center','center']" data-hoffset="['14','180','-1','3']"
+                         data-y="['top','top','top','top']" data-voffset="['278','268','271','307']"
+                         data-width="['370','370','351','345']"
+                         data-height="['186','195','188','180']"
+                         data-whitespace="nowrap"
+
+                         data-type="group"
+                         data-responsive_offset="on"
+
+                         data-frames='[{"delay":10,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                         data-margintop="[0,0,0,0]"
+                         data-marginright="[0,0,0,0]"
+                         data-marginbottom="[0,0,0,0]"
+                         data-marginleft="[0,0,0,0]"
+                         data-textAlign="['inherit','inherit','inherit','inherit']"
+                         data-paddingtop="[0,0,0,0]"
+                         data-paddingright="[0,0,0,0]"
+                         data-paddingbottom="[0,0,0,0]"
+                         data-paddingleft="[0,0,0,0]"
+
+                         style="z-index: 9; min-width: 370px; max-width: 370px; max-width: 186px; max-width: 186px; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: rgba(255, 255, 255, 1.00);background-color:rgba(255, 255, 255, 1.00);">
+                        <!-- LAYER NR. 34 -->
+                        <div class="tp-caption   tp-resizeme"
+                             id="slide-65-layer-15"
+                             data-x="['left','left','left','left']" data-hoffset="['115','117','117','106']"
+                             data-y="['top','top','top','top']" data-voffset="['30','30','30','22']"
+                             data-fontsize="['18','18','18','14']"
+                             data-lineheight="['18','18','18','22']"
+                             data-width="none"
+                             data-height="none"
+                             data-whitespace="nowrap"
+
+                             data-type="text"
+                             data-responsive_offset="on"
+
+                             data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                             data-margintop="[0,0,0,0]"
+                             data-marginright="[0,0,0,0]"
+                             data-marginbottom="[0,0,0,0]"
+                             data-marginleft="[0,0,0,0]"
+                             data-textAlign="['inherit','inherit','inherit','inherit']"
+                             data-paddingtop="[0,0,0,0]"
+                             data-paddingright="[0,0,0,0]"
+                             data-paddingbottom="[0,0,0,0]"
+                             data-paddingleft="[0,0,0,0]"
+
+                             style="z-index: 10; white-space: nowrap; font-size: 18px; line-height: 18px; font-weight: 700; color: rgba(136, 136, 136, 1.00);font-family:Roboto;background-color:rgba(255, 255, 255, 1.00);">24 months
+                        </div>
+
+                        <!-- LAYER NR. 35 -->
+                        <div class="tp-caption   tp-resizeme"
+                             id="slide-65-layer-17"
+                             data-x="['left','left','left','left']" data-hoffset="['30','30','30','35']"
+                             data-y="['top','top','top','top']" data-voffset="['70','60','68','59']"
+                             data-fontsize="['30','30','24','24']"
+                             data-lineheight="['22','30','24','22']"
+                             data-color="['rgba(35, 170, 255, 1.00)','rgba(242, 101, 34, 1.00)','rgba(242, 101, 34, 1.00)','rgba(242, 101, 34, 1.00)']"
+                             data-width="['none','none','none','100']"
+                             data-height="['none','none','none','30']"
+                             data-whitespace="nowrap"
+
+                             data-type="text"
+                             data-responsive_offset="on"
+
+                             data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                             data-margintop="[0,0,0,0]"
+                             data-marginright="[0,0,0,0]"
+                             data-marginbottom="[0,0,0,0]"
+                             data-marginleft="[0,0,0,0]"
+                             data-textAlign="['inherit','inherit','inherit','inherit']"
+                             data-paddingtop="[0,0,0,0]"
+                             data-paddingright="[0,0,0,0]"
+                             data-paddingbottom="[0,0,0,0]"
+                             data-paddingleft="[0,0,0,0]"
+
+                             style="z-index: 11; white-space: nowrap; font-size: 30px; line-height: 22px; font-weight: 700; color: rgba(35, 170, 255, 1.00);font-family:Roboto;">$685 </div>
+
+                        <!-- LAYER NR. 36 -->
+                        <div class="tp-caption   tp-resizeme"
+                             id="slide-65-layer-18"
+                             data-x="['left','left','left','left']" data-hoffset="['112','112','97','104']"
+                             data-y="['top','top','top','top']" data-voffset="['70','60','68','59']"
+                             data-fontsize="['30','30','24','24']"
+                             data-lineheight="['22','27','24','22']"
+                             data-width="none"
+                             data-height="none"
+                             data-whitespace="nowrap"
+
+                             data-type="text"
+                             data-responsive_offset="on"
+
+                             data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                             data-margintop="[0,0,0,0]"
+                             data-marginright="[0,0,0,0]"
+                             data-marginbottom="[0,0,0,0]"
+                             data-marginleft="[0,0,0,0]"
+                             data-textAlign="['inherit','inherit','inherit','inherit']"
+                             data-paddingtop="[0,0,0,0]"
+                             data-paddingright="[0,0,0,0]"
+                             data-paddingbottom="[0,0,0,0]"
+                             data-paddingleft="[0,0,0,0]"
+
+                             style="z-index: 12; white-space: nowrap; font-size: 30px; line-height: 22px; font-weight: 700; color: rgba(118, 118, 118, 1.00);font-family:Roboto;">PER MONTH * </div>
+
+                        <!-- LAYER NR. 37 -->
+                        <div class="tp-caption   tp-resizeme"
+                             id="slide-65-layer-19"
+                             data-x="['left','left','left','left']" data-hoffset="['30','30','30','35']"
+                             data-y="['top','top','top','top']" data-voffset="['30','30','30','22']"
+                             data-fontsize="['18','18','18','14']"
+                             data-lineheight="['18','18','18','22']"
+                             data-width="none"
+                             data-height="none"
+                             data-whitespace="nowrap"
+
+                             data-type="text"
+                             data-responsive_offset="on"
+
+                             data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                             data-margintop="[0,0,0,0]"
+                             data-marginright="[0,0,0,0]"
+                             data-marginbottom="[0,0,0,0]"
+                             data-marginleft="[0,0,0,0]"
+                             data-textAlign="['inherit','inherit','inherit','inherit']"
+                             data-paddingtop="[0,0,0,0]"
+                             data-paddingright="[0,0,0,0]"
+                             data-paddingbottom="[0,0,0,0]"
+                             data-paddingleft="[0,0,0,0]"
+
+                             style="z-index: 13; white-space: nowrap; font-size: 18px; line-height: 18px; font-weight: 300; color: rgba(136, 136, 136, 1.00);font-family:Roboto;background-color:rgba(255, 255, 255, 1.00);">Maximum </div>
+
+                        <!-- LAYER NR. 38 -->
+                        <div class="tp-caption   tp-resizeme"
+                             id="slide-65-layer-20"
+                             data-x="['left','left','left','left']" data-hoffset="['30','30','30','35']"
+                             data-y="['top','top','top','top']" data-voffset="['104','95','98','88']"
+                             data-fontsize="['30','30','24','24']"
+                             data-lineheight="['22','30','24','22']"
+                             data-color="['rgba(35, 170, 255, 1.00)','rgba(242, 101, 34, 1.00)','rgba(242, 101, 34, 1.00)','rgba(242, 101, 34, 1.00)']"
+                             data-width="['none','none','none','100']"
+                             data-height="['none','none','none','30']"
+                             data-whitespace="nowrap"
+
+                             data-type="text"
+                             data-responsive_offset="on"
+
+                             data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                             data-margintop="[0,0,0,0]"
+                             data-marginright="[0,0,0,0]"
+                             data-marginbottom="[0,0,0,0]"
+                             data-marginleft="[0,0,0,0]"
+                             data-textAlign="['inherit','inherit','inherit','inherit']"
+                             data-paddingtop="[0,0,0,0]"
+                             data-paddingright="[0,0,0,0]"
+                             data-paddingbottom="[0,0,0,0]"
+                             data-paddingleft="[0,0,0,0]"
+
+                             style="z-index: 14; white-space: nowrap; font-size: 30px; line-height: 22px; font-weight: 700; color: rgba(35, 170, 255, 1.00);font-family:Roboto;">0% </div>
+
+                        <!-- LAYER NR. 39 -->
+                        <div class="tp-caption   tp-resizeme"
+                             id="slide-65-layer-21"
+                             data-x="['left','left','left','left']" data-hoffset="['84','84','74','78']"
+                             data-y="['top','top','top','top']" data-voffset="['104','95','98','88']"
+                             data-fontsize="['30','30','24','24']"
+                             data-lineheight="['22','30','24','22']"
+                             data-width="none"
+                             data-height="none"
+                             data-whitespace="nowrap"
+
+                             data-type="text"
+                             data-responsive_offset="on"
+
+                             data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                             data-margintop="[0,0,0,0]"
+                             data-marginright="[0,0,0,0]"
+                             data-marginbottom="[0,0,0,0]"
+                             data-marginleft="[0,0,0,0]"
+                             data-textAlign="['inherit','inherit','inherit','inherit']"
+                             data-paddingtop="[0,0,0,0]"
+                             data-paddingright="[0,0,0,0]"
+                             data-paddingbottom="[0,0,0,0]"
+                             data-paddingleft="[0,0,0,0]"
+
+                             style="z-index: 15; white-space: nowrap; font-size: 30px; line-height: 22px; font-weight: 700; color: rgba(118, 118, 118, 1.00);font-family:Roboto;">APR FINANCE </div>
+
+                        <!-- LAYER NR. 40 -->
+                        <div class="tp-caption   tp-resizeme"
+                             id="slide-65-layer-22"
+                             data-x="['left','left','left','left']" data-hoffset="['30','31','30','35']"
+                             data-y="['top','top','top','top']" data-voffset="['135','130','130','120']"
+                             data-fontsize="['30','30','24','24']"
+                             data-lineheight="['22','30','24','22']"
+                             data-color="['rgba(35, 170, 255, 1.00)','rgba(242, 101, 34, 1.00)','rgba(242, 101, 34, 1.00)','rgba(242, 101, 34, 1.00)']"
+                             data-width="['none','none','none','100']"
+                             data-height="['none','none','none','30']"
+                             data-whitespace="nowrap"
+
+                             data-type="text"
+                             data-responsive_offset="on"
+
+                             data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                             data-margintop="[0,0,0,0]"
+                             data-marginright="[0,0,0,0]"
+                             data-marginbottom="[0,0,0,0]"
+                             data-marginleft="[0,0,0,0]"
+                             data-textAlign="['inherit','inherit','inherit','inherit']"
+                             data-paddingtop="[0,0,0,0]"
+                             data-paddingright="[0,0,0,0]"
+                             data-paddingbottom="[0,0,0,0]"
+                             data-paddingleft="[0,0,0,0]"
+
+                             style="z-index: 16; white-space: nowrap; font-size: 30px; line-height: 22px; font-weight: 700; color: rgba(35, 170, 255, 1.00);font-family:Roboto;">NO </div>
+
+                        <!-- LAYER NR. 41 -->
+                        <div class="tp-caption   tp-resizeme"
+                             id="slide-65-layer-23"
+                             data-x="['left','left','left','left']" data-hoffset="['84','84','74','78']"
+                             data-y="['top','top','top','top']" data-voffset="['135','130','130','120']"
+                             data-fontsize="['30','30','24','24']"
+                             data-lineheight="['22','29','24','22']"
+                             data-width="none"
+                             data-height="none"
+                             data-whitespace="nowrap"
+
+                             data-type="text"
+                             data-responsive_offset="on"
+
+                             data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                             data-margintop="[0,0,0,0]"
+                             data-marginright="[0,0,0,0]"
+                             data-marginbottom="[0,0,0,0]"
+                             data-marginleft="[0,0,0,0]"
+                             data-textAlign="['inherit','inherit','inherit','inherit']"
+                             data-paddingtop="[0,0,0,0]"
+                             data-paddingright="[0,0,0,0]"
+                             data-paddingbottom="[0,0,0,0]"
+                             data-paddingleft="[0,0,0,0]"
+
+                             style="z-index: 17; white-space: nowrap; font-size: 30px; line-height: 22px; font-weight: 700; color: rgba(118, 118, 118, 1.00);font-family:Roboto;">DEPOSIT </div>
+                    </div>
+
+                    <!-- LAYER NR. 42 -->
+                    <div class="tp-caption     rev_group"
+                         id="slide-65-layer-28"
+                         data-x="['left','left','center','left']" data-hoffset="['0','150','0','24']"
+                         data-y="['middle','top','top','top']" data-voffset="['-120','124','124','139']"
+                         data-width="['430','430','430','429']"
+                         data-height="['119','119','119','150']"
+                         data-whitespace="nowrap"
+
+                         data-type="group"
+                         data-responsive_offset="on"
+
+                         data-frames='[{"delay":10,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                         data-margintop="[0,0,0,0]"
+                         data-marginright="[0,0,0,0]"
+                         data-marginbottom="[0,0,0,0]"
+                         data-marginleft="[0,0,0,0]"
+                         data-textAlign="['inherit','inherit','inherit','inherit']"
+                         data-paddingtop="[0,0,0,0]"
+                         data-paddingright="[0,0,0,0]"
+                         data-paddingbottom="[0,0,0,0]"
+                         data-paddingleft="[0,0,0,0]"
+
+                         style="z-index: 18; min-width: 430px; max-width: 430px; max-width: 119px; max-width: 119px; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: rgba(255, 255, 255, 1.00);">
+                        <!-- LAYER NR. 43 -->
+                        <div class="tp-caption   tp-resizeme"
+                             id="slide-65-layer-24"
+                             data-x="['left','left','left','left']" data-hoffset="['65','65','65','68']"
+                             data-y="['top','top','top','top']" data-voffset="['0','0','0','18']"
+                             data-color="['rgba(242, 101, 34, 1.00)','rgba(242, 101, 34, 1.00)','rgba(255, 255, 255, 1.00)','rgba(255, 255, 255, 1.00)']"
+                             data-width="none"
+                             data-height="none"
+                             data-whitespace="nowrap"
+
+                             data-type="text"
+                             data-responsive_offset="on"
+
+                             data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                             data-margintop="[0,0,0,0]"
+                             data-marginright="[0,0,0,0]"
+                             data-marginbottom="[0,0,0,0]"
+                             data-marginleft="[0,0,0,0]"
+                             data-textAlign="['inherit','inherit','inherit','inherit']"
+                             data-paddingtop="[0,0,0,0]"
+                             data-paddingright="[0,0,0,0]"
+                             data-paddingbottom="[0,0,0,0]"
+                             data-paddingleft="[0,0,0,0]"
+
+                             style="z-index: 19; white-space: nowrap; font-size: 24px; line-height: 24px; font-weight: 300; color: rgba(242, 101, 34, 1.00);font-family:Open Sans;">HONDA CIVIC </div>
+
+                        <!-- LAYER NR. 44 -->
+                        <div class="tp-caption   tp-resizeme"
+                             id="slide-65-layer-25"
+                             data-x="['left','left','left','left']" data-hoffset="['0','0','0','10']"
+                             data-y="['top','top','top','top']" data-voffset="['0','0','0','18']"
+                             data-color="['rgba(242, 101, 34, 1.00)','rgba(242, 101, 34, 1.00)','rgba(255, 255, 255, 1.00)','rgba(255, 255, 255, 1.00)']"
+                             data-width="none"
+                             data-height="none"
+                             data-whitespace="nowrap"
+
+                             data-type="text"
+                             data-responsive_offset="on"
+
+                             data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                             data-margintop="[0,0,0,0]"
+                             data-marginright="[0,0,0,0]"
+                             data-marginbottom="[0,0,0,0]"
+                             data-marginleft="[0,0,0,0]"
+                             data-textAlign="['inherit','inherit','inherit','inherit']"
+                             data-paddingtop="[0,0,0,0]"
+                             data-paddingright="[0,0,0,0]"
+                             data-paddingbottom="[0,0,0,0]"
+                             data-paddingleft="[0,0,0,0]"
+
+                             style="z-index: 20; white-space: nowrap; font-size: 24px; line-height: 24px; font-weight: 700; color: rgba(242, 101, 34, 1.00);font-family:Roboto;">2017 </div>
+
+                        <!-- LAYER NR. 45 -->
+                        <div class="tp-caption   tp-resizeme"
+                             id="slide-65-layer-26"
+                             data-x="['left','left','left','left']" data-hoffset="['0','0','0','5']"
+                             data-y="['top','top','top','top']" data-voffset="['40','40','40','56']"
+                             data-fontsize="['72','72','72','70']"
+                             data-color="['rgba(242, 101, 34, 1.00)','rgba(242, 101, 34, 1.00)','rgba(255, 255, 255, 1.00)','rgba(255, 255, 255, 1.00)']"
+                             data-width="none"
+                             data-height="none"
+                             data-whitespace="nowrap"
+
+                             data-type="text"
+                             data-responsive_offset="on"
+
+                             data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                             data-margintop="[0,0,0,0]"
+                             data-marginright="[0,0,0,0]"
+                             data-marginbottom="[0,0,0,0]"
+                             data-marginleft="[0,0,0,0]"
+                             data-textAlign="['inherit','inherit','inherit','inherit']"
+                             data-paddingtop="[0,0,0,0]"
+                             data-paddingright="[0,0,0,0]"
+                             data-paddingbottom="[0,0,0,0]"
+                             data-paddingleft="[0,0,0,0]"
+
+                             style="z-index: 21; white-space: nowrap; font-size: 72px; line-height: 72px; font-weight: 700; color: rgba(242, 101, 34, 1.00);font-family:Oswald;">MONTHLY SALE </div>
+                    </div>
+
+                    <!-- LAYER NR. 46 -->
+                    <div class="tp-caption   tp-resizeme"
+                         id="slide-65-layer-5"
+                         data-x="['left','left','left','left']" data-hoffset="['100','100','100','100']"
+                         data-y="['top','top','top','top']" data-voffset="['100','100','100','100']"
+                         data-width="none"
+                         data-height="none"
+                         data-whitespace="nowrap"
+
+                         data-type="text"
+                         data-responsive_offset="on"
+
+                         data-frames='[{"delay":10,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                         data-textAlign="['inherit','inherit','inherit','inherit']"
+                         data-paddingtop="[0,0,0,0]"
+                         data-paddingright="[0,0,0,0]"
+                         data-paddingbottom="[0,0,0,0]"
+                         data-paddingleft="[0,0,0,0]"
+
+                         style="z-index: 5; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: rgba(255, 255, 255, 1.00);font-family:Open Sans;"> </div>
+
+                    <!-- LAYER NR. 47 -->
+                    <div class="tp-caption   tp-resizeme"
+                         id="slide-65-layer-31"
+                         data-x="['left','left','center','center']" data-hoffset="['16','161','0','85']"
+                         data-y="['top','top','top','top']" data-voffset="['615','491','487','518']"
+                         data-width="none"
+                         data-height="none"
+                         data-whitespace="nowrap"
+
+                         data-type="text"
+                         data-responsive_offset="on"
+
+                         data-frames='[{"delay":10,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                         data-textAlign="['inherit','inherit','inherit','inherit']"
+                         data-paddingtop="[0,0,0,0]"
+                         data-paddingright="[0,0,0,0]"
+                         data-paddingbottom="[0,0,0,0]"
+                         data-paddingleft="[0,0,0,0]"
+
+                         style="z-index: 22; white-space: nowrap; font-size: 16px; line-height: 16px; font-weight: 400; color: rgba(255, 255, 255, 1.00);font-family:Roboto;">* Included Tax and Check Up Fee </div>
+
+                    <!-- LAYER NR. 48 -->
+                    <div class="tp-caption   tp-resizeme"
+                         id="slide-65-layer-30"
+                         data-x="['left','left','center','right']" data-hoffset="['0','166','0','51']"
+                         data-y="['top','top','top','top']" data-voffset="['298','296','298','331']"
+                         data-width="none"
+                         data-height="none"
+                         data-whitespace="nowrap"
+
+                         data-type="image"
+                         data-responsive_offset="on"
+
+                         data-frames='[{"delay":10,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                         data-textAlign="['inherit','inherit','inherit','inherit']"
+                         data-paddingtop="[0,0,0,0]"
+                         data-paddingright="[0,0,0,0]"
+                         data-paddingbottom="[0,0,0,0]"
+                         data-paddingleft="[0,0,0,0]"
+
+                         style="z-index: 23;"><img src="images/uploads/Untitled-1.png" alt="" data-ww="['398px','398px','380px','371px']" data-hh="['179px','179px','171px','167px']" width="398" height="179" data-no-retina> </div>
+                </li>
+            </ul>
+            <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>	</div>
+    </div><!-- END REVOLUTION SLIDER -->
+
+    <div class="container">
+        <div class="products">
+            <div class="filter-menu">
+                <h2>BEST SELLER</h2>
+                <div class="iso-nav">
+                    <ul class="list-inline filter">
+                        <li class="active" data-filter="*">ALL</li>
+                        <li data-filter=".used">USED</li>
+                        <li data-filter=".new">BRAND NEW</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid row">
+                <div class="col-md-3 car-item used">
+                    <figure class="car-item-1">
+                        <div class="hover-effect">
+                            <img src="images/uploads/products-grid/car-grid-item-1.jpg" alt="Best Seller">
+                            <div class="label label-used">used</div>
+                            <div class="overlay"></div>
+                        </div>
+                        <figcaption>
+                            <div class="info">
+                                <h5>2017 Mazda CX-5 Activation 2.0L</h5>
+                                <div class="price">
+                                    <del>$105,530</del>
+                                    <ins>$95,900</ins>
+                                </div>
+                            </div>
+                            <div class="details">
+                                <span><img src="images/icon-calendar.png" alt=""> 2017</span><span>&#183;</span>
+                                <span><img src="images/icon-mile.png" alt=""> 12,000 MI</span><span>&#183;</span>
+                                <span><img src="images/icon-tranmission.png" alt=""> AUTO</span>
+                            </div>
+                            <div class="buttons">
+                                <div class="view-detail"><a href="inventory_single.html">view detail</a></div>
+                                <div class="add-to-compare"><img src="images/icon-speed.png" alt=""></div>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-3 car-item used">
+                    <figure class="car-item-1">
+                        <div class="hover-effect">
+                            <img src="images/uploads/products-grid/car-grid-item-2.jpg" alt="Best Seller">
+                            <div class="label label-used">used</div>
+                            <div class="overlay"></div>
+                        </div>
+                        <figcaption>
+                            <div class="info">
+                                <h5>2017 Mazda CX-5 Activation 2.0L</h5>
+                                <div class="price">
+                                    <del>$105,530</del>
+                                    <ins>$95,900</ins>
+                                </div>
+                            </div>
+                            <div class="details">
+                                <span><img src="images/icon-calendar.png" alt=""> 2017</span><span>&#183;</span>
+                                <span><img src="images/icon-mile.png" alt=""> 12,000 MI</span><span>&#183;</span>
+                                <span><img src="images/icon-tranmission.png" alt=""> AUTO</span>
+                            </div>
+                            <div class="buttons">
+                                <div class="view-detail"><a href="inventory_single.html">view detail</a></div>
+                                <div class="add-to-compare"><img src="images/icon-speed.png" alt=""></div>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-3 car-item new">
+                    <figure class="car-item-1">
+                        <div class="hover-effect">
+                            <img src="images/uploads/products-grid/car-grid-item-3.jpg" alt="Best Seller">
+                            <div class="label label-new">new</div>
+                            <div class="overlay"></div>
+                        </div>
+                        <figcaption>
+                            <div class="info">
+                                <h5>2017 Mazda CX-5 Activation 2.0L</h5>
+                                <div class="price">
+                                    <span class="amount">our price</span>
+                                    <span class="request">request</span>
+                                </div>
+                            </div>
+                            <div class="details">
+                                <span><img src="images/icon-calendar.png" alt=""> 2017</span><span>&#183;</span>
+                                <span><img src="images/icon-mile.png" alt=""> 12,000 MI</span><span>&#183;</span>
+                                <span><img src="images/icon-tranmission.png" alt=""> AUTO</span>
+                            </div>
+                            <div class="buttons">
+                                <div class="view-detail"><a href="inventory_single.html">view detail</a></div>
+                                <div class="add-to-compare"><img src="images/icon-speed.png" alt=""></div>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-3 car-item used">
+                    <figure class="car-item-1">
+                        <div class="hover-effect">
+                            <img src="images/uploads/products-grid/car-grid-item-4.jpg" alt="Best Seller">
+                            <div class="label label-used">used</div>
+                            <div class="overlay"></div>
+                        </div>
+                        <figcaption>
+                            <div class="info">
+                                <h5>2017 Mazda CX-5 Activation 2.0L</h5>
+                                <div class="price">
+                                    <del>$105,530</del>
+                                    <ins>$95,900</ins>
+                                </div>
+                            </div>
+                            <div class="details">
+                                <span><img src="images/icon-calendar.png" alt=""> 2017</span><span>&#183;</span>
+                                <span><img src="images/icon-mile.png" alt=""> 12,000 MI</span><span>&#183;</span>
+                                <span><img src="images/icon-tranmission.png" alt=""> AUTO</span>
+                            </div>
+                            <div class="buttons">
+                                <div class="view-detail"><a href="inventory_single.html">view detail</a></div>
+                                <div class="add-to-compare"><img src="images/icon-speed.png" alt=""></div>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="show-all"><a href="#">load more</a></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="welcome" id="welcome-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 welcome-text">
+                    <h2>Welcome to Autos Dealership!</h2>
+                    <p><i>Thank you for considering Autos Dealership, and we look forward to the chance to earn your business!</i></p>
+                    <p>Thank you for choosing Autos Dealership! We are happy to welcome Chicagoland drivers to our new facility, which features a 35,000 sq. ft. climate-controlled indoor showroom in Westmont dolor sit amet.  Browse our entire inventory here on our website, and please contact us if you have questions about any of the models in our showroom.</p>
+                    <i>Sincerely,</i>
+                    <b>Haintheme Team</b>
+                </div>
+                <div class="col-md-6">
+                    <iframe src="https://player.vimeo.com/video/58150390" style="width:100%; height:340px;" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="row schedules">
+                <div class="col-md-4">
+                    <div class="schedule-block">
+                        <img src="images/welcome-icon-car.png" alt="Welcome">
+                        <h5><a href="#">BROWSE OUR INVENTORY</a></h5>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="schedule-block">
+                        <img src="images/welcome-icon-steering-wheel.png" alt="Welcome">
+                        <h5><a href="#">Schedule A Test Driver</a></h5>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="schedule-block">
+                        <img src="images/welcome-icon-service.png" alt="Welcome">
+                        <h5><a href="#">Schedule A SERVICE</a></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="our-special" id="our-special-1">
+        <div class="col-md-6 special-banner">
+            <img src="images/uploads/our-special.png" alt="Our special">
+        </div>
+        <div class="col-md-6">
+            <h2>Our Special</h2>
+            <div class="special-carousel">
+                <div class="col-md-6">
+                    <div class="special-item">
+                        <a href="inventory_single.html"><img src="images/uploads/our-special-item-1.png" alt=""></a>
+                        <div class="special-label label-sale">
+                            <div class="amount">5%</div>
+                            <span>saleoff</span>
+                        </div>
+                        <div class="special-item-text">
+                            <div class="info info-1">
+                                <h4 class="name"><a href="inventory_single.html">2017 Mazda CX-5 <br>Activation 2.0L</a></h4>
+                                <div class="price">
+                                    <del>$105,530</del>
+                                    <ins>$95,900</ins>
+                                </div>
+                            </div>
+                            <p>Like new, all orginial, new sofa...</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="special-item">
+                        <a href="inventory_single.html"><img src="images/uploads/our-special-item-2.png" alt=""></a>
+                        <div class="special-label label-warranty">
+                            <div class="amount">12<small>mo</small></div>
+                            <span>warranty</span>
+                        </div>
+                        <div class="special-item-text">
+                            <div class="info info-1">
+                                <h4 class="name"><a href="inventory_single.html">2017 Mazda CX-5 <br>Activation 2.0L</a></h4>
+                                <div class="price">
+                                    <del>$105,530</del>
+                                    <ins>$95,900</ins>
+                                </div>
+                            </div>
+                            <p>Like new, all orginial, new sofa...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="special-item">
+                        <a href="inventory_single.html"><img src="images/uploads/our-special-item-1.png" alt=""></a>
+                        <div class="special-label label-sale">
+                            <div class="amount">5%</div>
+                            <span>saleoff</span>
+                        </div>
+                        <div class="special-item-text">
+                            <div class="info info-1">
+                                <h4 class="name"><a href="inventory_single.html">2017 Mazda CX-5 <br>Activation 2.0L</a></h4>
+                                <div class="price">
+                                    <del>$105,530</del>
+                                    <ins>$95,900</ins>
+                                </div>
+                            </div>
+                            <p>Like new, all orginial, new sofa...</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="special-item">
+                        <a href="inventory_single.html"><img src="images/uploads/our-special-item-2.png" alt=""></a>
+                        <div class="special-label label-warranty">
+                            <div class="amount">12<small>mo</small></div>
+                            <span>warranty</span>
+                        </div>
+                        <div class="special-item-text">
+                            <div class="info info-1">
+                                <h4 class="name"><a href="inventory_single.html">2017 Mazda CX-5 <br>Activation 2.0L</a></h4>
+                                <div class="price">
+                                    <del>$105,530</del>
+                                    <ins>$95,900</ins>
+                                </div>
+                            </div>
+                            <p>Like new, all orginial, new sofa...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- BEGIN | Features -->
+    <div class="features">
+        <div class="container">
+            <figure class="col-md-4 features-item">
+                <div class="features-icon">
+                    <img src="images/features-icon-test.png" alt="">
+                </div>
+                <figcaption>
+                    <h4>Free Test Driver</h4>
+                    <p>Make an appointment to test drive a vehicle that interests you.</p>
+                </figcaption>
+            </figure>
+            <figure class="col-md-4 features-item">
+                <div class="features-icon">
+                    <img src="images/features-icon-support.png" alt="">
+                </div>
+                <figcaption>
+                    <h4>24/7 Support</h4>
+                    <p>Get pre-approved today in 60 seconds with our online application.</p>
+                </figcaption>
+            </figure>
+            <figure class="col-md-4 features-item">
+                <div class="features-icon">
+                    <img src="images/features-icon-services.png" alt="">
+                </div>
+                <figcaption>
+                    <h4>Perfect Services</h4>
+                    <p>Questions, Comments or interest in a vehicle contact us today.</p>
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+    <!-- END | Features -->
+    <!-- START | Map -->
+
+    <div id="map">
+        <iframe src="https://snazzymaps.com/embed/428"></iframe>
+    </div>
+    <!-- https://snazzymaps.com/build-a-map/edit/428 -->
+
+    <!-- END | Map -->
+    <!-- START | Two Banners -->
+
+    <div class="two-banners" id="transform">
+        <div class="banner">
+            <div class="banner-bg" id="bg-left"></div>
+            <h1><a href="sell_a_car.html">YOU WANT TO SELL A CAR?</a></h1>
+        </div>
+        <div class="banner">
+            <div class="banner-bg" id="bg-right"></div>
+            <h1><a href="inventory.html">BUY A NEW CAR?</a></h1>
+        </div>
+    </div>
+
+    <!-- END | Two Banners -->
+    {% endblock body %}
+</main>
+
+<div class="topsearch-form ">
+    <form action="http://haintheme.com/demo/html/autos/topsearch.php">
+        <label><input type="text" placeholder="Search products&hellip;" id="top-search"></label>
+        <span id="search-close"><i class="icon ion-close"></i></span>
+    </form>
+</div>
+<footer class="ht-footer">
+    <div class="pre-footer">
+        <div class="container">
+            <div class="row">
+                <div class="intro col-md-3">
+                    <img src="images/uploads/header_logo-dark.png" alt="Logo">
+                    <p>At <a href="#">Autos</a>, we look forward to serving your Pre-Owned needs and we hope that we can help you with your next Pre-Owned purchase.</p>
+                    <h5>Find Us on:</h5>
+                    <div class="social">
+                        <a href="#"><i class="icon ion-social-facebook"></i></a>
+                        <a href="#"><i class="icon ion-social-twitter"></i></a>
+                        <a href="#"><i class="icon ion-social-googleplus"></i></a>
+                        <a href="#"><i class="icon ion-social-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="contact col-md-3">
+                    <h4>CONTACT INFO</h4>
+                    <ul>
+                        <li><i class="icon ion-ios-location"></i><span>3588 N  Stelling road, Brooklyn, NYC, United State.</span></li>
+                        <li><i class="icon ion-ios-telephone"></i><a href="tel:1900-167-168-99">1900-167-168-99 EXT: 001</a></li>
+                        <li><span class="glyphicon glyphicon-phone-alt"></span><a href="tel:841325643333">(84) 132-564-3333</a></li>
+                        <li><i class="icon ion-email-unread"></i><a href="mailto:Autos@support.com">Autos@support.com</a></li>
+                    </ul>
+                    <div class="come-with-us"><i class="icon ion-information-circled"></i> Come with us? <a href="#">View Direction</a></div>
+
+                </div>
+                <div class="working-hours col-md-3">
+                    <h4>WORKING HOURS</h4>
+                    <table class="table">
+                        <tbody>
+                        <tr>
+                            <td>Sat & Sunday:</td><td>Closed</td>
+                        </tr>
+                        <tr>
+                            <td>Tuesday:</td><td>8:00 AM - 6:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Wednesday:</td><td>8:00 AM - 6:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Thursday:</td><td>8:00 AM - 6:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Friday:</td><td>8:00 AM - 6:00 PM</td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+                <div class="subscribe col-md-3">
+                    <h4>SUBSCRIBE US</h4>
+                    <form>
+                        <div class="input-group">
+                            <input type="email" id="email-subscribe" name="email-subscribe" placeholder="Enter your email...">
+                            <button type="submit"><i class="icon ion-social-rss"></i></button>
+                        </div>
+                        <label> Get lastest updates and offers.</label>
+                    </form>
+                    <div class="gallery">
+                        <a href="#"><img src="images/uploads/footer-gallery-1.jpg" alt="gallery"></a>
+                        <a href="#"><img src="images/uploads/footer-gallery-2.jpg" alt="gallery"></a>
+                        <a href="#"><img src="images/uploads/footer-gallery-3.jpg" alt="gallery"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <div class="copy-right">
+                Copyright © 2017. Made with <i class="icon ion-ios-heart"></i> by <a href="#">FelixDG</a>.
+            </div>
+            <div class="site-link">
+                <a href="#">FAQS</a>
+                <a href="#">SITEMAP</a>
+                <a href="#">COMMUNITY</a>
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+<script src="{{ asset('js/jquery/1.9.1/jquery.min.js') }}"></script>
+<script src="{{ asset('js/jquery-1.12.4.js') }}"></script>
+<!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
+<script src="{{ asset('js/plugins.js') }}"></script>
+<script src="{{ asset('js/custom.js') }}"></script>
+</body>
+{% block script %}{% endblock script %}
+<!-- Mirrored from haintheme.com/demo/html/autos/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 24 May 2018 15:35:31 GMT -->
+</html>

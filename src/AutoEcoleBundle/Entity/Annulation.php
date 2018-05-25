@@ -24,6 +24,7 @@ class Annulation
 
     /**
      * @ORM\OneToOne(targetEntity="AutoEcoleBundle\Entity\Entrainement")
+     * @ORM\JoinColumn(name="entrainement_id", referencedColumnName="id", onDelete="CASCADE")
      */
     private $entrainement;
 
@@ -33,20 +34,6 @@ class Annulation
      * @ORM\Column(name="dateAnnulation", type="datetime")
      */
     private $dateAnnulation;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="raison", type="string", length=255)
-     */
-    private $raison;
-
-    /**
-     * @var bool
-     *
-     * @ORM\Column(name="approuve", type="boolean")
-     */
-    private $approuve;
 
     /**
      * @var bool
@@ -70,9 +57,6 @@ class Annulation
     {
         $this->postedby = $postedby;
     }
-
-
-
 
     /**
      * Get id
@@ -132,52 +116,5 @@ class Annulation
         return $this->dateAnnulation;
     }
 
-    /**
-     * Set raison
-     *
-     * @param string $raison
-     *
-     * @return Annulation
-     */
-    public function setRaison($raison)
-    {
-        $this->raison = $raison;
-
-        return $this;
-    }
-
-    /**
-     * Get raison
-     *
-     * @return string
-     */
-    public function getRaison()
-    {
-        return $this->raison;
-    }
-
-    /**
-     * Set approuve
-     *
-     * @param boolean $approuve
-     *
-     * @return Annulation
-     */
-    public function setApprouve($approuve)
-    {
-        $this->approuve = $approuve;
-
-        return $this;
-    }
-
-    /**
-     * Get approuve
-     *
-     * @return bool
-     */
-    public function getApprouve()
-    {
-        return $this->approuve;
-    }
 }
 

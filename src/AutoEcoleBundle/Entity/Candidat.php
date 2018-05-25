@@ -2,6 +2,7 @@
 
 namespace AutoEcoleBundle\Entity;
 
+use FOS\UserBundle\Model\User as BaseUser;
 use AutoEcoleBundle\AutoEcoleBundle;
 use AutoEcoleBundle\Entity\Code;
 use AutoEcoleBundle\Entity\Permis;
@@ -13,7 +14,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="candidat")
  * @ORM\Entity(repositoryClass="AutoEcoleBundle\Repository\CandidatRepository")
  */
-class Candidat
+class Candidat extends BaseUser
 {
     /**
      * @var int
@@ -22,7 +23,7 @@ class Candidat
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      */
-    private $id;
+    protected $id;
 
     /**
      * @var string
@@ -48,23 +49,9 @@ class Candidat
     /**
      * @var string
      *
-     * @ORM\Column(name="email", type="string", length=255, unique=true)
-     */
-    private $email;
-
-    /**
-     * @var string
-     *
      * @ORM\Column(name="motdepasse", type="string", length=255, unique=true)
      */
     private $motdepasse;
-
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="age", type="integer")
-     */
-    private $age;
 
     /**
      * @ORM\OneToOne(targetEntity="AutoEcoleBundle\Entity\Permis")
@@ -75,22 +62,6 @@ class Candidat
      * @ORM\OneToOne(targetEntity="AutoEcoleBundle\Entity\Code")
      */
     private $code;
-
-    /**
-     * @return string
-     */
-    public function getEmail()
-    {
-        return $this->email;
-    }
-
-    /**
-     * @param string $email
-     */
-    public function setEmail($email)
-    {
-        $this->email = $email;
-    }
 
     /**
      * @return string
@@ -107,17 +78,6 @@ class Candidat
     {
         $this->motdepasse = $motdepasse;
     }
-
-    /**
-     * Get id
-     *
-     * @return int
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
-
     /**
      * Set nom
      *
@@ -191,30 +151,6 @@ class Candidat
     }
 
     /**
-     * Set age
-     *
-     * @param integer $age
-     *
-     * @return Candidat
-     */
-    public function setAge($age)
-    {
-        $this->age = $age;
-
-        return $this;
-    }
-
-    /**
-     * Get age
-     *
-     * @return int
-     */
-    public function getAge()
-    {
-        return $this->age;
-    }
-
-    /**
      * Set permis
      *
      * @param Permis $permis
@@ -260,6 +196,11 @@ class Candidat
     public function getCode()
     {
         return $this->code;
+    }
+
+    public function __construct()
+    {
+        parent::__construct();
     }
 }
 

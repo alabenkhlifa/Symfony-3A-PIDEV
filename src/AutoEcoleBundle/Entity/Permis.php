@@ -40,7 +40,7 @@ class Permis
      */
     private $candidat;
     /**
-     * @ORM\ManyToOne(targetEntity="AutoEcoleBundle\Entity\Voiture", inversedBy="questions")
+     * @ORM\ManyToOne(targetEntity="AutoEcoleBundle\Entity\Voiture", inversedBy="permis")
      * @ORM\JoinColumn(name="voiture_id", referencedColumnName="id")
      */
     private $voiture;

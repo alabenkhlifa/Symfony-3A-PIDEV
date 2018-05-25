@@ -1,0 +1,24 @@
+rania_homepage:
+    path:     /
+    defaults: { _controller: RaniaBundle:Default:index }
+rania_entrainement_list:
+    path:     /entrainement/list
+    defaults: { _controller: RaniaBundle:Default:entrainementList }
+rania_entrainement_reserver:
+    path:     /entrainement/reserver
+    defaults: { _controller: RaniaBundle:Default:entrainementReserver }
+rania_entrainement_supprimer:
+    path:     /entrainement/supprimer/{id}
+    defaults: { _controller: RaniaBundle:Default:entrainementSupprimer }
+rania_entrainement_annuler:
+    path:     /entrainement/annuler/{id}
+    defaults: { _controller: RaniaBundle:Default:entrainementAnnuler }
+rania_annuler_approuver:
+    path:     /annuler/approuver/{id}
+    defaults: { _controller: RaniaBundle:Default:annulationApprouver }
+auto_ecole_moniteur_dashboard:
+    path:     /moniteur/dashboard
+    defaults: { _controller: RaniaBundle:Default:moniteurDashboard }
+auto_ecole_moniteur_login:
+    path:     /moniteur/login
+    defaults: { _controller: RaniaBundle:Default:loginMoniteur }

@@ -1,0 +1,4 @@
+services:
+#    rania.example:
+#        class: RaniaBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
