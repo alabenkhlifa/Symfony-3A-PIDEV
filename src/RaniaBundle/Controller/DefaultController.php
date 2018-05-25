@@ -62,7 +62,7 @@ class DefaultController extends Controller
                         return $this->render('@Rania/entrainement/occupe.html.twig',array('moniteur'=>$moniteur));
             }
             $voiture = $em->getRepository('AutoEcoleBundle:Voiture')->findOneById($request->get('voiture'));
-            $candidat = $em->getRepository('AutoEcoleBundle:Candidat')->findOneById($this->getUser());
+            $candidat = $em->getRepository('AutoEcoleBundle:Candidat')->findOneById($this->getUser()->getId());
             $entrainement = new Entrainement();
             $entrainement->setCandidat($candidat);
             $entrainement->setVoiture($voiture);
@@ -93,7 +93,7 @@ class DefaultController extends Controller
         $entrainement = $em->getRepository('AutoEcoleBundle:Entrainement')->findOneBy(array('id'=>$id));
         $annulation = new Annulation();
         $user = $this->getUser();
-        if(!in_array('ROLE_SUPER_ADMIN', $user->getRoles()))
+        if($user != null)
             $annulation->setPostedby(0);
         else
             $annulation->setPostedby(1);
@@ -103,12 +103,22 @@ class DefaultController extends Controller
         $entrainement->setAnnulation($annulation);
         $em->merge($entrainement);
         $em->flush();
-        if(!in_array('ROLE_SUPER_ADMIN', $user->getRoles())){
+        if($user == null){
             return $this->redirectToRoute('auto_ecole_moniteur_dashboard');
         }
         else{
             return $this->redirectToRoute('rania_entrainement_list');
         }
+    }
+
+    public function entrainementApprouverAction($id)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $entrainement = $em->getRepository('AutoEcoleBundle:Entrainement')->findOneBy(array('id'=>$id));
+        $entrainement->setApprouve(true);
+        $em->merge($entrainement);
+        $em->flush();
+        return $this->redirectToRoute('auto_ecole_moniteur_dashboard');
     }
 
     public function annulationApprouverAction($id)
@@ -117,7 +127,7 @@ class DefaultController extends Controller
         $annulation = $em->getRepository('AutoEcoleBundle:Annulation')->findOneBy(array('id'=>$id));
         $em->remove($annulation);
         $em->flush();
-        if(!in_array('ROLE_SUPER_ADMIN', $this->getUser()->getRoles())){
+        if($this->getUser() == null){
             return $this->redirectToRoute('auto_ecole_moniteur_dashboard');
         }
         else{

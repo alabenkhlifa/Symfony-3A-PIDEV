@@ -62,6 +62,44 @@ class Candidat extends BaseUser
      * @ORM\OneToOne(targetEntity="AutoEcoleBundle\Entity\Code")
      */
     private $code;
+    /**
+     * @ORM\OneToMany(targetEntity="AutoEcoleBundle\Entity\Entrainement", mappedBy="candidat")
+     */
+    private $entrainements;
+
+    /**
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param int $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getEntrainements()
+    {
+        return $this->entrainements;
+    }
+
+    /**
+     * @param mixed $entrainements
+     */
+    public function setEntrainements($entrainements)
+    {
+        $this->entrainements = $entrainements;
+    }
+
+
 
     /**
      * @return string

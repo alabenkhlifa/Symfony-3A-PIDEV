@@ -22,3 +22,6 @@ auto_ecole_moniteur_dashboard:
 auto_ecole_moniteur_login:
     path:     /moniteur/login
     defaults: { _controller: RaniaBundle:Default:loginMoniteur }
+rania_entrainement_approuver:
+    path:     /entrainement/approuver/{id}
+    defaults: { _controller: RaniaBundle:Default:entrainementApprouver }
